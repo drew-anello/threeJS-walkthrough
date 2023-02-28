@@ -18,7 +18,7 @@ light.position.set(0, 10, 10)
 scene.add(light)
 
 // camera (params are field of view)
-const camera = new THREE.PerspectiveCamera(45, 800 / 600)
+const camera = new THREE.PerspectiveCamera(45, 800 / 600, 0.1, 100)
 camera.position.z = 20
 scene.add(camera)
 
