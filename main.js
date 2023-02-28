@@ -1,6 +1,5 @@
 import * as THREE from 'three'
-import { PositionalAudio } from 'three'
-
+import './style.css'
 // scene (think of this as a movie scene this is the enviorment)
 const scene = new THREE.Scene()
 
