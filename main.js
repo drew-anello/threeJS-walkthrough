@@ -16,6 +16,8 @@ scene.add(mesh)
 const camera = new THREE.PerspectiveCamera(45, 800, 600)
 scene.add(camera)
 
-// render
+// renderer
 const canvas = document.querySelector('.webgl')
-const render = new THREE.WebGLRenderer({ canvas })
+const renderer = new THREE.WebGLRenderer({ canvas })
+renderer.setSize(800, 600)
+renderer.render(scene, camera)
