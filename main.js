@@ -15,3 +15,7 @@ scene.add(mesh)
 // params are field of view
 const camera = new THREE.PerspectiveCamera(45, 800, 600)
 scene.add(camera)
+
+// render
+const canvas = document.querySelector('.webgl')
+const render = new THREE.WebGLRenderer({ canvas })
