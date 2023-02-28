@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import { PositionalAudio } from 'three'
 
 // scene (think of this as a movie scene this is the enviorment)
 const scene = new THREE.Scene()
@@ -11,9 +12,14 @@ const material = new THREE.MeshStandardMaterial({
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
-// camera
-// params are field of view
-const camera = new THREE.PerspectiveCamera(45, 800, 600)
+// lights
+const light = new THREE.PointLight(0xffffff, 1, 100)
+light.position.set(0, 10, 10)
+scene.add(light)
+
+// camera (params are field of view)
+const camera = new THREE.PerspectiveCamera(45, 800 / 600)
+camera.position.z = 20
 scene.add(camera)
 
 // renderer
