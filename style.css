@@ -3,9 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Playstation';
+  src: url('./fonts/playstation.ttf');
+}
 body, html {
   overflow-x: hidden;
-  font-family: 'playstation';
+  font-family: 'Playstation', monospace;
 } 
 .webgl {
   position: absolute;
