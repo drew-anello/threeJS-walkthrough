@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import './style.css'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 // scene (think of this as a movie scene this is the enviorment)
 const scene = new THREE.Scene()
 
@@ -39,6 +40,11 @@ const renderer = new THREE.WebGLRenderer({ canvas })
 renderer.setSize(sizes.width, sizes.height)
 renderer.render(scene, camera)
 
+// controls
+
+const controls = new OrbitControls(camera, canvas)
+controls.enableDamping = true
+
 // Resize
 window.addEventListener('resize', () => {
   sizes.width = window.innerWidth
@@ -49,6 +55,7 @@ window.addEventListener('resize', () => {
   renderer.setSize(sizes.width, sizes.height)
 })
 const loop = () => {
+  controls.update()
   renderer.render(scene, camera)
   window.requestAnimationFrame(loop)
 }
